@@ -31,6 +31,7 @@ echo 'unqualified-search-registries=["docker.io"]' | sudo tee -a /etc/containers
 ```console
 docker pull kalilinux/kali-rolling
 docker pull tleemcjr/metasploitable2
+```
 
 ## Create Kali (attack box)
 ```console
