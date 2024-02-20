@@ -48,6 +48,15 @@ docker run -d -it --name metasploitable --network lab_network --ip="192.168.2.3"
 docker exec -it kali bash
 ```
 
+## Installing the basics on Kali
+```console
+apt update && apt -y install kali-linux-headless
+apt upgrade -y
+printf '%s\n' "deb https://download.docker.com/linux/debian bullseye stable" | tee /etc/apt/sources.list.d/docker-ce.list
+curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/trusted.gpg.d/docker-ce-archive-keyring.gpg
+apt update && apt install -y docker-ce docker-ce-cli containerd.io
+```
+
 ## Exiting Kali
 ```console
 exit
